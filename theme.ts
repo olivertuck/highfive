@@ -6,6 +6,13 @@ const primaryColor = deepPurple.A400;
 const theme = createMuiTheme({
   overrides: {
     MuiButton: {
+      contained: {
+        fontWeight: 700,
+        boxShadow: 'none',
+        '&:hover': {
+          boxShadow: 'none',
+        },
+      },
       root: {
         color: 'rgba(0, 0, 0, 0.54)',
         textTransform: 'none',
@@ -13,7 +20,7 @@ const theme = createMuiTheme({
     },
     MuiCardActions: {
       root: {
-        padding: '0 8px 8px 8px',
+        borderTop: '1px solid #e5e7eb',
       },
     },
     MuiCardHeader: {
@@ -46,6 +53,11 @@ const theme = createMuiTheme({
       primary: {
         fontSize: '0.875rem',
         fontWeight: 500,
+      },
+    },
+    MuiOutlinedInput: {
+      notchedOutline: {
+        borderColor: '#e5e7eb',
       },
     },
   },

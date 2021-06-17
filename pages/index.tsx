@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import FeedListItem from 'types/FeedListItem';
 import Layout from 'components/Layout';
+import NewPostCard from 'components/NewPostCard';
 import FeedList from 'components/FeedList';
 
 const feedListItems: FeedListItem[] = [
@@ -58,7 +59,14 @@ const Home = () => (
       <title>Home | Highfive</title>
       <meta name="description" content="Home | Highfive" />
     </Head>
-    <Layout main={<FeedList items={feedListItems} />} />
+    <Layout
+      main={
+        <>
+          <NewPostCard />
+          <FeedList items={feedListItems} />
+        </>
+      }
+    />
   </>
 );
 

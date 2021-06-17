@@ -59,8 +59,12 @@ const HighFiveCard = ({ highFive }: HighFiveCardProps) => (
       </Typography>
     </CardContent>
     <CardActions>
-      <Button startIcon={<HiOutlineThumbUp size={20} />}>Like</Button>
-      <Button startIcon={<HiOutlineChatAlt2 size={20} />}>Comment</Button>
+      <Button startIcon={<HiOutlineThumbUp size={20} />} size="small">
+        Like
+      </Button>
+      <Button startIcon={<HiOutlineChatAlt2 size={20} />} size="small">
+        Comment
+      </Button>
     </CardActions>
   </Card>
 );
