@@ -1,16 +1,27 @@
 import { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Hidden from '@material-ui/core/Hidden';
 import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
+import MobileNavigation from 'components/MobileNavigation';
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    [theme.breakpoints.down('xs')]: {
+      padding: 0,
+    },
+  },
   grid: {
-    display: 'grid',
-    gridTemplateColumns: '256px 1fr 256px',
-    gap: theme.spacing(4),
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    [theme.breakpoints.up('sm')]: {
+      display: 'grid',
+      gridTemplateColumns: '256px 1fr 256px',
+      gap: theme.spacing(4),
+      paddingTop: theme.spacing(4),
+      paddingBottom: theme.spacing(4),
+    },
   },
 }));
 
@@ -24,12 +35,17 @@ const Layout = ({ main }: LayoutProps) => {
   return (
     <>
       <Header />
-      <Container>
+      <Container className={classes.container}>
         <div className={classes.grid}>
-          <Sidebar />
+          <Hidden xsDown>
+            <Sidebar />
+          </Hidden>
           <main>{main}</main>
         </div>
       </Container>
+      <Hidden smUp>
+        <MobileNavigation />
+      </Hidden>
     </>
   );
 };

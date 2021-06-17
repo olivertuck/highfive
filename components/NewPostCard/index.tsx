@@ -16,6 +16,9 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   newPostCard: {
     marginBottom: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      borderRadius: 0,
+    },
   },
   inputGridItem: {
     flexGrow: 1,
