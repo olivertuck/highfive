@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import FeedListItem from 'types/FeedListItem';
+import Post from 'types/Post';
 import Layout from 'components/Layout';
 import NewPostCard from 'components/NewPostCard';
-import FeedList from 'components/FeedList';
+import PostList from 'components/PostList';
 
-const feedListItems: FeedListItem[] = [
+const postListItems: Post[] = [
   {
     type: 'highFive',
     item: {
@@ -90,7 +90,7 @@ const Home = () => (
       main={
         <>
           <NewPostCard />
-          <FeedList items={feedListItems} />
+          <PostList items={postListItems} />
         </>
       }
     />

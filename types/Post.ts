@@ -1,8 +1,8 @@
 import HighFive from 'types/HighFive';
 
-interface FeedListItem {
+interface Post {
   type: 'highFive';
   item: HighFive;
 }
 
-export default FeedListItem;
+export default Post;

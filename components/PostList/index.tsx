@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
-import FeedListItem from 'types/FeedListItem';
+import Post from 'types/Post';
 import HighFiveCard from 'components/HighFiveCard';
 
 const useStyles = makeStyles((theme) => ({
-  feedList: {
+  postList: {
     margin: 0,
     padding: 0,
     listStyleType: 'none',
@@ -13,15 +13,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface FeedListProps {
-  items: FeedListItem[];
+interface PostListProps {
+  items: Post[];
 }
 
-const FeedList = ({ items }: FeedListProps) => {
+const PostList = ({ items }: PostListProps) => {
   const classes = useStyles();
 
   return (
-    <ul className={classes.feedList}>
+    <ul className={classes.postList}>
       {items.map((item) => (
         <li key={item.item.id}>
           {item.type === 'highFive' && <HighFiveCard highFive={item.item} />}
@@ -31,4 +31,4 @@ const FeedList = ({ items }: FeedListProps) => {
   );
 };
 
-export default FeedList;
+export default PostList;
