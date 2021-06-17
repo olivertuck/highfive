@@ -7,6 +7,7 @@ interface HighFive {
   receiver: User;
   pointsGiven: number;
   body: string;
+  photoURL: string;
 }
 
 export default HighFive;

@@ -26,6 +26,7 @@ const feedListItems: FeedListItem[] = [
       },
       pointsGiven: 50,
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac mi non tellus efficitur ultricies. Donec eget mi non velit imperdiet dapibus sit amet et risus. ',
+      photoURL: '',
     },
   },
   {
@@ -49,6 +50,8 @@ const feedListItems: FeedListItem[] = [
       },
       pointsGiven: 75,
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac mi non tellus efficitur ultricies. Donec eget mi non velit imperdiet dapibus sit amet et risus. ',
+      photoURL:
+        'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80',
     },
   },
   {
@@ -72,6 +75,7 @@ const feedListItems: FeedListItem[] = [
       },
       pointsGiven: 50,
       body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac mi non tellus efficitur ultricies. Donec eget mi non velit imperdiet dapibus sit amet et risus. ',
+      photoURL: '',
     },
   },
 ];

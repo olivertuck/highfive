@@ -10,6 +10,7 @@ import {
 } from 'react-icons/hi';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import HighFive from 'types/HighFive';
@@ -20,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('xs')]: {
       borderRadius: 0,
     },
+  },
+  media: {
+    height: 256,
   },
 }));
 
@@ -78,6 +82,9 @@ const HighFiveCard = ({ highFive }: HighFiveCardProps) => {
           {highFive.body}
         </Typography>
       </CardContent>
+      {highFive.photoURL && (
+        <CardMedia className={classes.media} image={highFive.photoURL} />
+      )}
       <CardActions>
         <Button startIcon={<HiOutlineThumbUp size={20} />} size="small">
           Like
