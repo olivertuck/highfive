@@ -8,10 +8,7 @@ const theme = createMuiTheme({
     MuiButton: {
       contained: {
         fontWeight: 700,
-        boxShadow: 'none',
-        '&:hover': {
-          boxShadow: 'none',
-        },
+        boxShadow: 'none !important',
       },
       root: {
         color: 'rgba(0, 0, 0, 0.54)',
