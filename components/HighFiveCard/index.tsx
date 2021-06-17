@@ -13,6 +13,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
+import ClampLines from 'react-clamp-lines';
 import HighFive from 'types/HighFive';
 import dayjs from 'utils/dayjs';
 
@@ -20,6 +21,20 @@ const useStyles = makeStyles((theme) => ({
   highFiveCard: {
     [theme.breakpoints.down('xs')]: {
       borderRadius: 0,
+    },
+  },
+  body: {
+    '& p': {
+      ...theme.typography.body2,
+      margin: 0,
+      color: theme.palette.text.secondary,
+    },
+    '& .clamp-lines__button': {
+      ...theme.typography.body2,
+      padding: 0,
+      color: theme.palette.primary.main,
+      backgroundColor: 'transparent',
+      border: 'none',
     },
   },
   media: {
@@ -78,9 +93,16 @@ const HighFiveCard = ({ highFive }: HighFiveCardProps) => {
         }
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary">
-          {highFive.body}
-        </Typography>
+        <ClampLines
+          id={`highFiveBody-${highFive.id}`}
+          text={highFive.body}
+          lines={2}
+          ellipsis="..."
+          moreText="Read more"
+          lessText="Read less"
+          className={classes.body}
+          innerElement="p"
+        />
       </CardContent>
       {highFive.photoURL && (
         <CardMedia className={classes.media} image={highFive.photoURL} />
