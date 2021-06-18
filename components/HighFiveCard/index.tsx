@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     '& p': {
       ...theme.typography.body2,
       margin: 0,
-      color: theme.palette.text.secondary,
+      color: theme.palette.text.primary,
     },
     '& .clamp-lines__button': {
       ...theme.typography.body2,
