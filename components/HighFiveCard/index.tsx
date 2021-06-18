@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
       backgroundColor: 'transparent',
       border: 'none',
+      cursor: 'pointer',
     },
   },
   media: {
