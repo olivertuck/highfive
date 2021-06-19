@@ -24,7 +24,7 @@
   @apply px-0;
   @apply border-none;
   @apply focus:ring-0;
-  @apply !text-sm;
+  @apply md:text-sm !important;
 }
 
 .w-full__highlighter strong {
