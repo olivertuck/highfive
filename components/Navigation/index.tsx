@@ -20,23 +20,39 @@ const Navigation = ({ items }: NavigationProps) => {
             <li key={item.name}>
               <Link href={item.href}>
                 <a
-                  className={classNames('flex items-center px-3 py-2', {
-                    'text-white rounded-full bg-primary-600': isCurrentPath,
-                  })}
+                  className={classNames(
+                    'flex items-center justify-between px-3 py-2',
+                    {
+                      'text-white rounded-full bg-primary-600': isCurrentPath,
+                    }
+                  )}
                 >
+                  <div className="flex items-center space-x-3">
+                    <span
+                      className={classNames({
+                        'text-gray-500': !isCurrentPath,
+                      })}
+                    >
+                      {item.icon}
+                    </span>
+                    <span
+                      className={classNames('text-sm font-semibold', {
+                        'text-gray-800': !isCurrentPath,
+                      })}
+                    >
+                      {item.name}
+                    </span>
+                  </div>
                   <span
-                    className={classNames('mr-3', {
-                      'text-gray-500': !isCurrentPath,
-                    })}
+                    className={classNames(
+                      'py-0.5 px-1.5 text-xs font-semibold rounded-full',
+                      {
+                        'bg-gray-200': !isCurrentPath,
+                        'bg-white text-primary-600': isCurrentPath,
+                      }
+                    )}
                   >
-                    {item.icon}
-                  </span>
-                  <span
-                    className={classNames('text-sm font-semibold', {
-                      'text-gray-800': !isCurrentPath,
-                    })}
-                  >
-                    {item.name}
+                    {item.count}
                   </span>
                 </a>
               </Link>

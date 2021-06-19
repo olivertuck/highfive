@@ -5,29 +5,34 @@ import {
   HiOutlineChartBar,
   HiOutlineGift,
 } from 'react-icons/hi';
+import NavigationItem from 'types/NavigationItem';
 import Header from 'components/Header';
 import Navigation from 'components/Navigation';
 
-const NavigationItems = [
+const NavigationItems: NavigationItem[] = [
   {
     name: 'Home',
     icon: <HiOutlineHome size={24} />,
     href: '/',
+    count: 27,
   },
   {
     name: 'Events',
     icon: <HiOutlineCalendar size={24} />,
     href: '/events',
+    count: 12,
   },
   {
     name: 'Surveys',
     icon: <HiOutlineChartBar size={24} />,
     href: '/surveys',
+    count: 8,
   },
   {
     name: 'Rewards',
     icon: <HiOutlineGift size={24} />,
     href: '/rewards',
+    count: 5,
   },
 ];
 
