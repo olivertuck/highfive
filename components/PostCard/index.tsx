@@ -1,8 +1,8 @@
 import {
-  HiOutlineDotsVertical,
-  HiOutlineThumbUp,
-  HiOutlineChatAlt2,
-} from 'react-icons/hi';
+  IoEllipsisVertical,
+  IoHeartOutline,
+  IoChatboxOutline,
+} from 'react-icons/io5';
 import Post from 'types/Post';
 import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
@@ -22,7 +22,7 @@ const PostCard = ({ post }: PostCardProps) => (
     <CardHeader
       action={
         <IconButton>
-          <HiOutlineDotsVertical size={20} />
+          <IoEllipsisVertical size={20} />
         </IconButton>
       }
     >
@@ -51,10 +51,10 @@ const PostCard = ({ post }: PostCardProps) => (
       </div>
     </CardContent>
     <CardFooter>
-      <CardFooterButton icon={<HiOutlineThumbUp size={20} />}>
+      <CardFooterButton icon={<IoHeartOutline size={20} />}>
         Like
       </CardFooterButton>
-      <CardFooterButton icon={<HiOutlineChatAlt2 size={20} />}>
+      <CardFooterButton icon={<IoChatboxOutline size={20} />}>
         Comment
       </CardFooterButton>
     </CardFooter>

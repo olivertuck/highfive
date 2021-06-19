@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { MentionsInput, Mention } from 'react-mentions';
 import {
-  HiOutlinePlus,
-  HiOutlinePhotograph,
-  HiOutlineVideoCamera,
-  HiOutlineEmojiHappy,
-} from 'react-icons/hi';
+  IoImageOutline,
+  IoVideocamOutline,
+  IoHappyOutline,
+  IoAddOutline,
+} from 'react-icons/io5';
 import User from 'types/User';
 import Card from 'components/Card';
 import CardContent from 'components/CardContent';
@@ -68,16 +68,16 @@ const CreatePostCard = () => {
         <div className="flex justify-end">
           <div className="absolute bottom-1 left-1">
             <IconButton>
-              <HiOutlinePhotograph size={20} />
+              <IoImageOutline size={20} />
             </IconButton>
             <IconButton>
-              <HiOutlineVideoCamera size={20} />
+              <IoVideocamOutline size={20} />
             </IconButton>
             <IconButton>
-              <HiOutlineEmojiHappy size={20} />
+              <IoHappyOutline size={20} />
             </IconButton>
             <IconButton>
-              <HiOutlinePlus size={20} />
+              <IoAddOutline size={20} />
             </IconButton>
           </div>
           <Button>High five</Button>
