@@ -14,7 +14,7 @@ const CardHeader = ({ children, action }: CardHeaderProps) => (
     })}
   >
     {children}
-    {action && <div className="absolute top-0 right-0">{action}</div>}
+    {action && <div className="absolute top-1 right-1">{action}</div>}
   </div>
 );
 

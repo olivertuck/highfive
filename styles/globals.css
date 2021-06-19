@@ -19,3 +19,9 @@
     @apply font-bold;
   }
 }
+
+.create-post-mentions-input .w-full__input {
+  @apply pl-0;
+  @apply border-none;
+  @apply focus:ring-0;
+}

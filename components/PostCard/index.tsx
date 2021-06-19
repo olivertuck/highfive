@@ -45,7 +45,7 @@ const PostCard = ({ post }: PostCardProps) => (
     </CardHeader>
     <CardContent>
       <p className="text-sm text-gray-800">{post.post.body}</p>
-      <div className="flex justify-between text-sm">
+      <div className="flex justify-between mt-3 text-sm">
         <div>{`${post.post.likesCount} likes`}</div>
         <div>{`${post.post.commentsCount} comments`}</div>
       </div>
