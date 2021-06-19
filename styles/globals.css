@@ -24,13 +24,13 @@
   @apply px-0;
   @apply border-none;
   @apply focus:ring-0;
-  @apply md:text-sm !important;
+  @apply sm:text-sm !important;
 }
 
 .w-full__highlighter strong {
   @apply relative;
   @apply text-primary-600;
-  @apply text-sm;
+  @apply sm:text-sm;
   @apply z-10;
 }
 
