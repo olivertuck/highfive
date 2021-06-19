@@ -4,6 +4,7 @@ interface AvatarProps {
 }
 
 const Avatar = ({ src, alt }: AvatarProps) => (
+  // eslint-disable-next-line @next/next/no-img-element
   <img
     className="w-[2.625rem] h-[2.625rem] rounded-full sm:w-[2.375rem] sm:h-[2.375rem]"
     src={src}
