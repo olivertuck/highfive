@@ -45,6 +45,10 @@ const PostCard = ({ post }: PostCardProps) => (
     </CardHeader>
     <CardContent>
       <p className="text-sm text-gray-800">{post.post.body}</p>
+      <div className="flex justify-between text-sm">
+        <div>{`${post.post.likesCount} likes`}</div>
+        <div>{`${post.post.commentsCount} comments`}</div>
+      </div>
     </CardContent>
     <CardFooter>
       <CardFooterButton icon={<HiOutlineThumbUp size={20} />}>

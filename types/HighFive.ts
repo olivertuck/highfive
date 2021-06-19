@@ -6,6 +6,8 @@ interface HighFive {
   receiver: User;
   createdAt: string;
   body: string;
+  likesCount: number;
+  commentsCount: number;
 }
 
 export default HighFive;
