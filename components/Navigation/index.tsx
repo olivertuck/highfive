@@ -21,7 +21,7 @@ const Navigation = ({ items }: NavigationProps) => {
               <Link href={item.href}>
                 <a
                   className={classNames('flex items-center px-3 py-2', {
-                    'text-white rounded-lg bg-primary-600': isCurrentPath,
+                    'text-white rounded-full bg-primary-600': isCurrentPath,
                   })}
                 >
                   <span
