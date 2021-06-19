@@ -26,9 +26,9 @@ const PostCard = ({ post }: PostCardProps) => (
         </IconButton>
       }
     >
-      <div className="flex items-start">
+      <div className="flex items-start space-x-2">
         <Avatar src={post.post.giver.photoURL} alt={post.post.giver.fullname} />
-        <div className="ml-2">
+        <div>
           <div className="text-sm">
             <span className="font-semibold text-gray-800">
               {post.post.giver.fullname}
