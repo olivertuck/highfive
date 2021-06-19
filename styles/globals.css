@@ -21,7 +21,41 @@
 }
 
 .create-post-mentions-input .w-full__input {
-  @apply pl-0;
+  @apply px-0;
   @apply border-none;
   @apply focus:ring-0;
+  @apply !text-sm;
+}
+
+.w-full__highlighter strong {
+  @apply relative;
+  @apply text-primary-600;
+  @apply text-sm;
+  @apply z-10;
+}
+
+.w-full__suggestions {
+  @apply py-1;
+  @apply border;
+  @apply rounded-lg;
+  @apply shadow-sm;
+}
+
+.w-full__suggestions__item {
+  @apply mx-1;
+  @apply px-2;
+  @apply py-0.5;
+}
+
+.w-full__suggestions__item--focused {
+  @apply bg-gray-100;
+  @apply rounded-lg;
+}
+
+.w-full__suggestions__item__display {
+  @apply text-sm;
+}
+
+.w-full__suggestions__item__highlight {
+  @apply text-gray-800;
 }

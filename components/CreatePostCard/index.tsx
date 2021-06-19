@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MentionsInput, Mention } from 'react-mentions';
 import {
   HiOutlinePlus,
@@ -27,6 +28,13 @@ const users: User[] = [
       'https://media-exp3.licdn.com/dms/image/C4E03AQEFuqK0OnWVjw/profile-displayphoto-shrink_800_800/0/1559908113220?e=1629331200&v=beta&t=nHUjvGcxXRhlCEkzcP-r7cLLAUzOnNRajLliSJ4TjZc',
     jobTitle: 'Strategic Accounts',
   },
+  {
+    id: '3',
+    fullname: 'Isabella Rossi',
+    photoURL:
+      'https://media-exp3.licdn.com/dms/image/C4D03AQFGutJ5UeNoNA/profile-displayphoto-shrink_800_800/0/1573011232631?e=1629331200&v=beta&t=ZefNMDmVzZ39XiWa34dQPleM-Sp3mappI6geNuU4AEc',
+    jobTitle: 'Software Engineer',
+  },
 ];
 
 const data = users.map((user) => ({
@@ -34,45 +42,49 @@ const data = users.map((user) => ({
   display: user.fullname,
 }));
 
-const CreatePostCard = () => (
-  <Card>
-    <CardContent>
-      <div className="flex space-x-2">
-        <Avatar
-          src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/118702179_2781749765442273_5517126084877553362_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=UeaMKrNmBZQAX-jTf8_&_nc_ht=scontent-man2-1.xx&oh=f16d401de6c3f31320cee854b067f602&oe=60D1753F"
-          alt="Oliver Tuck"
-        />
-        <MentionsInput
-          className="w-full create-post-mentions-input"
-          placeholder="Write a new post..."
-          a11ySuggestionsListLabel="Mention a user to high five"
-        >
-          <Mention
-            trigger="@"
-            data={data}
-            // renderSuggestion={this.renderUserSuggestion}
+const CreatePostCard = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event: any, newValue: string) => setValue(newValue);
+
+  return (
+    <Card>
+      <CardContent>
+        <div className="flex space-x-2">
+          <Avatar
+            src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/118702179_2781749765442273_5517126084877553362_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=UeaMKrNmBZQAX-jTf8_&_nc_ht=scontent-man2-1.xx&oh=f16d401de6c3f31320cee854b067f602&oe=60D1753F"
+            alt="Oliver Tuck"
           />
-        </MentionsInput>
-      </div>
-      <div className="flex justify-end">
-        <div className="absolute bottom-1 left-1">
-          <IconButton>
-            <HiOutlinePhotograph size={20} />
-          </IconButton>
-          <IconButton>
-            <HiOutlineVideoCamera size={20} />
-          </IconButton>
-          <IconButton>
-            <HiOutlineEmojiHappy size={20} />
-          </IconButton>
-          <IconButton>
-            <HiOutlinePlus size={20} />
-          </IconButton>
+          <MentionsInput
+            className="w-full create-post-mentions-input"
+            placeholder="Write a new post..."
+            a11ySuggestionsListLabel="Mention a user to high five"
+            value={value}
+            onChange={handleChange}
+          >
+            <Mention trigger="@" data={data} />
+          </MentionsInput>
         </div>
-        <Button>High five</Button>
-      </div>
-    </CardContent>
-  </Card>
-);
+        <div className="flex justify-end">
+          <div className="absolute bottom-1 left-1">
+            <IconButton>
+              <HiOutlinePhotograph size={20} />
+            </IconButton>
+            <IconButton>
+              <HiOutlineVideoCamera size={20} />
+            </IconButton>
+            <IconButton>
+              <HiOutlineEmojiHappy size={20} />
+            </IconButton>
+            <IconButton>
+              <HiOutlinePlus size={20} />
+            </IconButton>
+          </div>
+          <Button>High five</Button>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 export default CreatePostCard;
