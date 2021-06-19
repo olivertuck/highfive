@@ -6,7 +6,7 @@ interface CardHeaderProps {
 }
 
 const CardHeader = ({ children, action }: CardHeaderProps) => (
-  <div className="relative pt-3 pl-3 pr-3">
+  <div className="relative pt-3 pl-3 pr-10">
     {children}
     {action && <div className="absolute top-0 right-0">{action}</div>}
   </div>
