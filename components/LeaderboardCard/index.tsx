@@ -18,7 +18,7 @@ const LeaderboardCard = ({ leaderboard }: LeaderboardCardProps) => (
         {leaderboard.map((leaderboardItem) => (
           <li
             key={leaderboardItem.id}
-            className="flex items-start justify-between py-2 first:pt-0 last:pb-0"
+            className="flex items-center justify-between py-2 first:pt-0 last:pb-0"
           >
             <div className="flex items-start space-x-2">
               <Avatar
