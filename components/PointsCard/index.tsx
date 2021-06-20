@@ -13,7 +13,11 @@ const PointsCard = ({ pointsCount }: PointsCardProps) => (
   <Card>
     <CardHeader title="Points" icon={<IoWalletOutline size={20} />} />
     <CardContent>
-      <p className="text-sm">{`You have ${pointsCount} points to redeem`}</p>
+      <p className="text-sm">
+        You have{' '}
+        <span className="font-semibold text-gray-800">{pointsCount}</span>{' '}
+        points to redeem
+      </p>
     </CardContent>
     <CardFooter>
       <CardFooterButton icon={<IoCartOutline size={20} />}>
