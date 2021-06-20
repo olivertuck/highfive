@@ -16,7 +16,7 @@ interface LeaderboardCardProps {
 
 const LeaderboardCard = ({ leaderboard }: LeaderboardCardProps) => {
   const [currentTimeframe, setCurrentTimeframe] =
-    useState<LeaderboardTimeframe>('1w');
+    useState<LeaderboardTimeframe>('Week');
 
   return (
     <Card>
@@ -47,17 +47,17 @@ const LeaderboardCard = ({ leaderboard }: LeaderboardCardProps) => {
       </CardContent>
       <CardFooter>
         <LeaderboardCardFooterButton
-          timeframe="1w"
+          timeframe="Week"
           currentTimeframe={currentTimeframe}
           setCurrentTimeframe={setCurrentTimeframe}
         />
         <LeaderboardCardFooterButton
-          timeframe="1m"
+          timeframe="Month"
           currentTimeframe={currentTimeframe}
           setCurrentTimeframe={setCurrentTimeframe}
         />
         <LeaderboardCardFooterButton
-          timeframe="1y"
+          timeframe="Year"
           currentTimeframe={currentTimeframe}
           setCurrentTimeframe={setCurrentTimeframe}
         />

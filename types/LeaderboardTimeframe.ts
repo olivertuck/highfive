@@ -1,3 +1,3 @@
-type LeaderboardTimeframe = '1w' | '1m' | '1y';
+type LeaderboardTimeframe = 'Week' | 'Month' | 'Year';
 
 export default LeaderboardTimeframe;
