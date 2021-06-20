@@ -6,6 +6,7 @@ import {
 import Post from 'types/Post';
 import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
+import Badge from 'components/Badge';
 import dayjs from 'utils/dayjs';
 import Avatar from 'components/Avatar';
 import IconButton from 'components/IconButton';
@@ -37,7 +38,8 @@ const PostCard = ({ post }: PostCardProps) => (
             <span className="font-semibold text-gray-800">
               {post.post.receiver.fullname}
             </span>{' '}
-            a high five ✋
+            a high five ✋{' '}
+            <Badge color="green">{`+${post.post.pointsGiven}`}</Badge>
           </div>
           <div className="text-sm">{dayjs(post.post.createdAt).fromNow()}</div>
         </div>

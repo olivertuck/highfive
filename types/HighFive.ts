@@ -4,6 +4,7 @@ interface HighFive {
   id: string;
   giver: User;
   receiver: User;
+  pointsGiven: number;
   createdAt: string;
   body: string;
   likesCount: number;
