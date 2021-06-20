@@ -1,3 +1,4 @@
+import { IoTrophyOutline } from 'react-icons/io5';
 import LeaderboardItem from 'types/LeaderboardItem';
 import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
@@ -11,7 +12,7 @@ interface LeaderboardCardProps {
 
 const LeaderboardCard = ({ leaderboard }: LeaderboardCardProps) => (
   <Card>
-    <CardHeader title="Leaderboard" />
+    <CardHeader title="Leaderboard" icon={<IoTrophyOutline size={20} />} />
     <CardContent>
       <ul className="divide-y">
         {leaderboard.map((leaderboardItem) => (

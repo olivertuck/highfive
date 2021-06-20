@@ -1,4 +1,4 @@
-import { IoCartOutline, IoGiftOutline } from 'react-icons/io5';
+import { IoWalletOutline, IoCartOutline, IoGiftOutline } from 'react-icons/io5';
 import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
 import CardContent from 'components/CardContent';
@@ -11,7 +11,7 @@ interface PointsCardProps {
 
 const PointsCard = ({ pointsCount }: PointsCardProps) => (
   <Card>
-    <CardHeader title="Points" />
+    <CardHeader title="Points" icon={<IoWalletOutline size={20} />} />
     <CardContent>
       <p className="text-sm">{`You have ${pointsCount} points to redeem`}</p>
     </CardContent>
