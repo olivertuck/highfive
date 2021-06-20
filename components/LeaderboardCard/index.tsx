@@ -1,4 +1,3 @@
-import { IoTrendingUpOutline } from 'react-icons/io5';
 import LeaderboardItem from 'types/LeaderboardItem';
 import Card from 'components/Card';
 import CardHeader from 'components/CardHeader';
