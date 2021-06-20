@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 interface NavigationItem {
-  name: string;
+  title: string;
   icon: ReactNode;
   href: string;
   count: number;

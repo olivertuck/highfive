@@ -11,25 +11,25 @@ import Navigation from 'components/Navigation';
 
 const NavigationItems: NavigationItem[] = [
   {
-    name: 'Home',
+    title: 'Home',
     icon: <IoHomeOutline size={24} />,
     href: '/',
     count: 27,
   },
   {
-    name: 'Events',
+    title: 'Events',
     icon: <IoCalendarClearOutline size={24} />,
     href: '/events',
     count: 12,
   },
   {
-    name: 'Surveys',
+    title: 'Surveys',
     icon: <IoPieChartOutline size={24} />,
     href: '/surveys',
     count: 8,
   },
   {
-    name: 'Rewards',
+    title: 'Rewards',
     icon: <IoGiftOutline size={24} />,
     href: '/rewards',
     count: 5,

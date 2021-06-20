@@ -17,7 +17,7 @@ const Navigation = ({ items }: NavigationProps) => {
           const isCurrentPath = item.href === router.pathname;
 
           return (
-            <li key={item.name}>
+            <li key={item.title}>
               <Link href={item.href}>
                 <a
                   className={classNames(
@@ -41,7 +41,7 @@ const Navigation = ({ items }: NavigationProps) => {
                         'text-gray-800': !isCurrentPath,
                       })}
                     >
-                      {item.name}
+                      {item.title}
                     </span>
                   </div>
                   <span

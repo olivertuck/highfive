@@ -11,9 +11,7 @@ interface PointsCardProps {
 
 const PointsCard = ({ pointsCount }: PointsCardProps) => (
   <Card>
-    <CardHeader>
-      <h2>Points</h2>
-    </CardHeader>
+    <CardHeader title="Points" />
     <CardContent>
       <p>{`You have ${pointsCount} points to redeem`}</p>
     </CardContent>

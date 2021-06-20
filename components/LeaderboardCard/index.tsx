@@ -11,9 +11,7 @@ interface LeaderboardCardProps {
 
 const LeaderboardCard = ({ leaderboard }: LeaderboardCardProps) => (
   <Card>
-    <CardHeader>
-      <h2>Leaderboard</h2>
-    </CardHeader>
+    <CardHeader title="Leaderboard" />
     <CardContent>
       <ul className="divide-y">
         {leaderboard.map((leaderboardItem) => (
