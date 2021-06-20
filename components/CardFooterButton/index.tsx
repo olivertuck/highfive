@@ -5,7 +5,7 @@ interface CardFooterButtonProps {
   active?: boolean;
   icon?: ReactNode;
   children: ReactNode;
-  width?: '1/2' | '1/4';
+  width?: '1/2' | '1/3';
   onClick?: () => void;
 }
 
@@ -20,7 +20,7 @@ const CardFooterButton = ({
     className={classNames('flex items-center justify-center py-0.5 space-x-1', {
       'text-primary-600': active,
       'w-1/2': width === '1/2',
-      'w-1/4': width === '1/4',
+      'w-1/3': width === '1/3',
     })}
     type="button"
     onClick={onClick}

@@ -13,7 +13,7 @@ const LeaderboardCardFooterButton = ({
   setCurrentTimeframe,
 }: LeaderboardCardFooterButtonProps) => (
   <CardFooterButton
-    width="1/4"
+    width="1/3"
     active={timeframe === currentTimeframe}
     onClick={() => setCurrentTimeframe(timeframe)}
   >
