@@ -23,7 +23,7 @@ const Navigation = ({ items }: NavigationProps) => {
                   className={classNames(
                     'flex items-center justify-between px-3 py-2 rounded-full group',
                     {
-                      'hover:bg-gray-50': !isCurrentPath,
+                      'hover:bg-gray-100': !isCurrentPath,
                       'text-white bg-primary-600': isCurrentPath,
                     }
                   )}
@@ -48,7 +48,8 @@ const Navigation = ({ items }: NavigationProps) => {
                     className={classNames(
                       'py-0.5 px-1.5 text-xs font-semibold rounded-full',
                       {
-                        'bg-gray-100 group-hover:bg-gray-200': !isCurrentPath,
+                        'bg-gray-100 group-hover:bg-gray-500 group-hover:text-gray-100':
+                          !isCurrentPath,
                         'bg-white text-primary-600': isCurrentPath,
                       }
                     )}
