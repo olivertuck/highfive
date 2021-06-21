@@ -8,7 +8,13 @@ interface CardHeaderProps {
   action?: ReactNode;
 }
 
-const CardHeader = ({ title, icon, children, action }: CardHeaderProps) => (
+const CardHeader = ({
+  title,
+  subtitle,
+  icon,
+  children,
+  action,
+}: CardHeaderProps) => (
   <div
     className={classNames('relative pt-3 pl-3', {
       'pr-3': !action,
