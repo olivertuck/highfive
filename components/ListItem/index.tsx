@@ -8,8 +8,8 @@ interface ListItemProps {
 }
 
 const ListItem = ({ avatar, title, subtitle, action }: ListItemProps) => (
-  <li className="flex items-center justify-between py-2 first:pt-0 last:pb-0">
-    <div className="flex items-start space-x-2">
+  <li className="flex items-center justify-between py-3 first:pt-0 last:pb-0">
+    <div className="flex items-center space-x-2">
       {avatar}
       <div>
         <div className="text-sm font-semibold text-gray-800">{title}</div>
