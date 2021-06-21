@@ -18,7 +18,7 @@ const LeaderboardCardPeopleList = ({
         avatar={<Avatar src={person.photoURL} alt={person.fullname} />}
         title={person.fullname}
         subtitle={person.jobTitle}
-        action={<Badge color="green">{person.pointsChange}</Badge>}
+        action={<Badge color="green">{`+${person.pointsChange}`}</Badge>}
       />
     ))}
   </List>

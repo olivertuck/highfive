@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  IoBusinessOutline,
+  IoBriefcaseOutline,
   IoPersonOutline,
   IoPeopleOutline,
 } from 'react-icons/io5';
@@ -22,7 +22,7 @@ const CompanyCard = ({ company }: CompanyCardProps) => {
 
   return (
     <Card>
-      <CardHeader title="Company" icon={<IoBusinessOutline size={20} />} />
+      <CardHeader title="Company" icon={<IoBriefcaseOutline size={20} />} />
       <CardContent>
         {currentTab === 'People' && <PeopleList people={company.people} />}
         {currentTab === 'Teams' && <TeamsList teams={company.teams} />}
