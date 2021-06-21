@@ -2,7 +2,7 @@ import HeaderSearch from 'components/HeaderSearch';
 import Avatar from 'components/Avatar';
 
 const Header = () => (
-  <header className="py-3 bg-primary-600">
+  <header className="fixed top-0 left-0 right-0 z-10 py-3 bg-primary-600">
     <div className="container">
       <div className="grid grid-cols-[2rem,1fr,2.625rem] sm:grid-cols-[2rem,1fr,2.375rem] gap-3">
         <div className="flex items-center">

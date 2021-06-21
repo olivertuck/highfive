@@ -45,7 +45,7 @@ const Layout = ({ main, aside }: LayoutProps) => (
   <>
     <Header />
     <div className="container px-0 sm:px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-[16rem,1fr,16rem] gap-4 sm:gap-8 py-4 sm:py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[16rem,1fr,16rem] gap-4 sm:gap-8 pt-[5.125rem] pb-4 sm:pt-[5.875rem] sm:pb-8">
         <aside className="hidden lg:block">
           <Navigation items={NavigationItems} />
         </aside>
