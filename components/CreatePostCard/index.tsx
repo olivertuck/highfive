@@ -52,7 +52,7 @@ const CreatePostCard = () => {
       <CardContent>
         <div className="flex space-x-2">
           <Avatar
-            src="https://scontent-man2-1.xx.fbcdn.net/v/t1.6435-9/118702179_2781749765442273_5517126084877553362_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=UeaMKrNmBZQAX-jTf8_&_nc_ht=scontent-man2-1.xx&oh=f16d401de6c3f31320cee854b067f602&oe=60D1753F"
+            src="https://media-exp3.licdn.com/dms/image/C4E03AQFYXr7syI_2Qw/profile-displayphoto-shrink_800_800/0/1516916405275?e=1629936000&v=beta&t=Nh_VHh51G_tHNbzJxFLHbdsjNDIvHug9QlE2NsgBeCg"
             alt="Oliver Tuck"
           />
           <MentionsInput
